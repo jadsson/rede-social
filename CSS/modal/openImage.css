@@ -1,0 +1,42 @@
+.modalPicture {
+    display: none;
+    position: fixed;
+    background-color: rgba(0,0,0,.4);
+    backdrop-filter: blur(20px);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 70px 0 10px 0;
+    z-index: 10;
+}
+#imageModal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contentModal {
+    width: 100%;
+    max-width: 90vw;
+    height: 90vh;
+    max-height: 900px;
+    overflow: hidden;
+    margin: auto;
+}
+.contentModal .pictureInModal {
+    width: 100%;
+    max-height: 1000px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+.closeModal {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background-color: rgb(255, 255, 255, .2);
+    border-radius: 50%;
+    font-size: 20px;
+    padding: 2px 12px 7px 10px;
+    cursor: pointer;
+    color: var(--color-orange);
+}
