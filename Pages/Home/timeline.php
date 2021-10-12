@@ -9,7 +9,7 @@
                 <div class="user-perfil">
                     <div class="perfil-data">
                         <div class="perfil-img">
-                            <img class="user-image" src="https://media.redadn.es/imagenes/halo-infinite-pc-xbox-one_335812_pn2.jpg" alt="">
+                            <img class="user-image" src="http://localhost/xgram/Assets/Images/dragonball-3.jpg" alt="">
                         </div>
                         <span class="perfil-username">usuário</span>
                     </div>
@@ -33,7 +33,7 @@
                 <div class="user-perfil">
                     <div class="perfil-data">
                         <div class="perfil-img">
-                            <img class="user-image" src="https://media.redadn.es/imagenes/halo-infinite-pc-xbox-one_335812_pn2.jpg" alt="">
+                            <img class="user-image" src="http://localhost/xgram/Assets/Images/dragonball-3.jpg" alt="">
                         </div>
                         <span class="perfil-username">usuário</span>
                     </div>
@@ -57,7 +57,7 @@
                 <div class="user-perfil">
                     <div class="perfil-data">
                         <div class="perfil-img">
-                            <img class="user-image" src="https://media.redadn.es/imagenes/halo-infinite-pc-xbox-one_335812_pn2.jpg" alt="">
+                            <img class="user-image" src="http://localhost/xgram/Assets/Images/dragonball-3.jpg" alt="">
                         </div>
                         <span class="perfil-username">usuário</span>
                     </div>
@@ -82,7 +82,7 @@
                 <div class="user-perfil">
                     <div class="perfil-data">
                         <div class="perfil-img">
-                            <img class="user-image" src="https://media.redadn.es/imagenes/halo-infinite-pc-xbox-one_335812_pn2.jpg" alt="">
+                            <img class="user-image" src="http://localhost/xgram/Assets/Images/dragonball-3.jpg" alt="">
                         </div>
                         <span class="perfil-username">usuário</span>
                     </div>

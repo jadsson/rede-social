@@ -10,7 +10,7 @@ header {
     top: 0;
     right: 0;
     left: 0;
-    height: 60px;
+    height: 70px;
     background-color: #121212;
     border-bottom: 2px solid #161616;
 
@@ -24,7 +24,7 @@ header {
 }
 .menu-list {
     display: flex;
-    
+    align-items: center;
 }
 .menu-list li {
     list-style: none;
@@ -32,10 +32,6 @@ header {
     border-radius: 5px 5px 0 0;
     font-size: 14px;
     letter-spacing: .45px;
-}
-.menu-list li:hover {
-    background: #c1c1c1;
-    color: #121212;
 }
 
 .search-form {
@@ -46,7 +42,7 @@ header {
     justify-content: center;
     background-color: #c1c1c1;
     border-radius: 5px;
-    top: 30px;
+    top: 35px;
 
     position: absolute;
 }

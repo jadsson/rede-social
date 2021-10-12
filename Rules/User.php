@@ -10,7 +10,7 @@
             $stmt->execute();
             
             if($stmt->rowCount() > 0) {
-                return "This username alread exists";
+                return "$name já existe";
             } else {
                 
                 $sql = "SELECT id_user FROM users WHERE usermail = ?";
@@ -19,7 +19,7 @@
                 $stmt->execute();
                 
                 if($stmt->rowCount() > 0) {
-                    return "Email alread exists";
+                    return "$email já existe";
                     
                 } else {
 
@@ -29,7 +29,7 @@
                     $stmt->bindValue(1, $name);
                     $stmt->bindValue(2, $email);
                     $stmt->bindValue(3, password_hash($pass, PASSWORD_DEFAULT));
-                    $stmt->execute() ? $msg = "SingUp completed" : "Error in SignUp";
+                    $stmt->execute() ? $msg = "usuário registrado com sucesso" : "erro ao registrar usuário";
 
                     return $msg;
                 }
@@ -100,57 +100,25 @@
                     $_SESSION["username"]   = $userData["username"];
                     $_SESSION["usermail"]   = $userData["usermail"];
 
-                    echo "<script>alert('welcome {$userData['username']}')</script>";
+                    echo "<script>alert('bem-vindo(a) {$userData['username']}')</script>";
                     echo "<script>location.href = 'http://localhost/xgram/'</script>";
                     return true;
                 } else {
                 
-                    echo "<script>alert('invalid password')</script>";
+                    echo "<script>alert('senha inválida')</script>";
                     return false;
                 }
             } else {
 
-                echo "<script>alert('invalid username or email')</script>";
+                echo "<script>alert('nome de usuário ou email inválidos')</script>";
                 return false;
-            }
-        }
-
-        function CreateAccount($email, $name, $password){
-            $sql = "SELECT * FROM users WHERE usermail = ?";
-            $stmt = Conect::Con()->prepare($sql);
-            $stmt->bindValue(1, $email);
-            $stmt->execute();
-            if($stmt->rowCount() > 0) {
-                
-                echo "<script>alert('$email alread exists')</script>";
-                return false;
-            } else {
-                $sql = "SELECT * FROM users WHERE username = ?";
-                $stmt = Conect::Con()->prepare($sql);
-                $stmt->bindValue(1, $name);
-                $stmt->execute();
-
-                if($stmt->rowCount() > 0) {
-
-                    echo "<script>alert('$name alread exists')</script>";
-                    return false;
-                } else {
-
-                    $sql = "INSERT INTO users (username, usermail, pass) VALUES (?,?,?)";
-                    $stmt = Conect::Con()->prepare($sql);
-                    $stmt->bindValue(1, $name);
-                    $stmt->bindValue(2, $email);
-                    $stmt->bindValue(3, password_hash($password, PASSWORD_DEFAULT));
-
-                    echo "<script>alert('account created')</script>";
-                    return true;
-                }
             }
         }
 
         function LogOut(){
             !isset($_SESSION) ? session_start() : false;
             unset($_SESSION["id"], $_SESSION["usermail"], $_SESSION["username"]);
+            echo "<script>alert('sua sessão foi encerrada')</script>";
             echo "<script>location.href = 'http://localhost/xgram'</script>";
             exit;
         }
