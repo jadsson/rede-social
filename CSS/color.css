@@ -1,12 +1,22 @@
 :root {
     --color-red: #cc0000;
+    --color-rose: #ff987e;
     --color-blue: #0566ff;
     --color-orange: #ff4500;
+    --color-white-strong: #ffffff;
     --color-white: #c1c1c1;
     --color-yellow: #ddaa00;
-    --color-back: #151515;
+    --color-black: #000000;
 
-    --color-white-strong: white;
+    --color-back: #151515;
+    --color-back-post: #090909;
+    --color-back-second: #242424;
+    --color-back-header: #121212;
+    --color-line: #161616;
+
+    --color-icon-standard: #505050;
+    --color-icon-blue: #006a7e;
+
 
     --color-yellow-second: #ac8400;
 }

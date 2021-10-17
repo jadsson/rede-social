@@ -40,3 +40,9 @@
     cursor: pointer;
     color: var(--color-white);
 }
+
+@media (max-width: 700px) {
+    .closeModal {
+        top: 90vh;
+    }
+}

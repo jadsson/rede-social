@@ -49,16 +49,14 @@
         height: 30px;
     }
     @media (max-width: 700px) {
-        .back-drop {
+        .icon-menu {
+            top: calc(100vh - 52px);
+            right: 10px;
+            left: auto;
+        }
+        .drop-menu {
             width: 100vw;
-            height: calc(100vh + 10px);
-            background-color: rgba(0,0,0,.6);
-            position: absolute;
-            top: -70px;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            z-index: -1;
+            top: 0;
         }
     }
     .open-menu {
@@ -70,7 +68,6 @@
     <img src="http://localhost/xgram/Assets/Icons/menu_white_24dp.svg" alt="" class="icon-open-close">
 </div>
 <div class="drop-menu">
-    <div class="back-drop"></div>
     <ul class="list">
         <li>
             <img src="http://localhost/xgram/Assets/Icons/person_white_24dp.svg" alt="">
@@ -129,4 +126,5 @@
             '' 
         );
     })
+
 </script>

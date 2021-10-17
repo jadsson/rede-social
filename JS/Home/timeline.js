@@ -48,14 +48,11 @@ document.querySelector('.closeModal')
 });
 
 const options = document.querySelectorAll('.container-options');
+const modalMenu = document.querySelectorAll('.modalMenu');
 for(let i=0; i<options.length; ++i) {
-    let position = [
-        'primeira',
-        'segunda',
-        'terceira',
-        'quarta'
-    ];
-    options[i].addEventListener('click', ()=>{
-        alert(`clicou nas opções da ${position[i]} publicação`);
+    options[i].addEventListener('click', (e)=>{
+        console.log(e);
+        modalMenu[i].style.display = 'block';
+        
     })
 }

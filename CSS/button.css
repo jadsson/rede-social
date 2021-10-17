@@ -12,7 +12,6 @@ button {
 .bt-red {
     border: 1px solid var(--color-red);
     color: var(--color-red);
-    box-shadow: 0 0 5px 0 var(--color-red);
 }
 .bt-red:hover {
     background-color: var(--color-red);
@@ -21,7 +20,6 @@ button {
 .bt-blue {
     border: 1px solid var(--color-blue);
     color: var(--color-blue);
-    box-shadow: 0 0 5px 0 var(--color-blue);
 }
 .bt-blue:hover {
     background-color: var(--color-blue);
@@ -30,7 +28,6 @@ button {
 .bt-yellow {
     border: 1px solid var(--color-yellow);
     color: var(--color-yellow);
-    box-shadow: 0 0 5px 0 var(--color-yellow);
 }
 .bt-yellow:hover {
     background-color: var(--color-yellow-second);
@@ -39,7 +36,6 @@ button {
 .bt-orange {
     border: 1px solid var(--color-orange);
     color: var(--color-orange);
-    box-shadow: 0 0 5px 0 var(--color-orange);
 }
 .bt-orange:hover {
     background-color: var(--color-orange);

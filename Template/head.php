@@ -1,5 +1,9 @@
 <?php 
     !isset($_SESSION) ? session_start() : '';
+    include_once 'Rules/User.php';
+
+    $usuarioRegra = new User();
+    $usuarioLogado = $usuarioRegra->ReadUser($_SESSION['id']);
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -7,32 +11,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="http://localhost/xgram/CSS/global.css">
-    <link rel="stylesheet" href="http://localhost/xgram/CSS/head.css">
+    <link rel="stylesheet" href="CSS/head.css">
+    <link rel="stylesheet" href="CSS/global.css">
+    <link rel="stylesheet" href="CSS/button.css">
+    <link rel="stylesheet" href="CSS/form.css">
+    <link rel="stylesheet" href="CSS/timeline.css">
+    <link rel="stylesheet" href="CSS/modal/openImage.css">
     <title>xGram</title>
 </head>
-
-<style>
-    .perfil-menu li {
-        width: 70px;
-        height: 60px;
-    }
-    .perfil-menu img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 50%;
-    }
-    .search-form img {
-        cursor: pointer;
-    }
-    #send-search {
-        outline: none;
-        border: none;
-        border-radius: 0;
-        width: 10%;
-    }
-</style>
 
 <body>
     <header>
@@ -52,7 +38,7 @@
                     <ul class="menu-list">
                         <a href="" title="suas fotos"><li><img src="http://localhost/xgram/Assets/Icons/collections_white_24dp.svg" alt=""></li></a>
                         <a href="" title="mensagens"><li><img src="http://localhost/xgram/Assets/Icons/chat_white_24dp.svg" alt=""></li></a>
-                        <a href="" class="perfil-menu" title="<?php echo $_SESSION['username']; ?>"><li><img src="http://localhost/xgram/Assets/Images/dragonball-1.jpg" alt=""></li></a>
+                        <a href="" class="perfil-menu" title="<?php echo $usuarioLogado['username']; ?>"><li><img src="http://localhost/xgram/Assets/Images/Perfil/<?php echo $usuarioLogado['userimg']?>" alt=""></li></a>
                     </ul>
                 <?php
                 }

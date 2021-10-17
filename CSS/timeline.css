@@ -11,12 +11,13 @@
     height: auto;
 }
 .container-img {
-    background: rgb(9, 9, 9);
-    border: 1px solid #161616;
+    background: var(--color-back-post);
+    border: 1px solid var(--color-line);
     margin: 0 0 40px 0;
     height: auto;
     border-radius: 5px;
     padding: 0 0 20px 0;
+    position: relative;
 }
 @media (max-width: 700px) {
     .timeline-father {
@@ -92,7 +93,7 @@
     height: 15px;
     position: relative;
     transform: rotate(45deg);
-    background-color: #505050;
+    background-color: var(--color-icon-standard);
     cursor: pointer;
     top: 10px;
     left: 5px;
@@ -118,13 +119,13 @@
     left: -7.5px;
 }
 .like {
-    background-color: rgb(200,0,0);
+    background-color: var(--color-red);
 }
 
 .balao {
     position: absolute;
     border-radius: 50px 20px 60px 0px;
-    background: #505050;
+    background: var(--color-icon-standard);
     width: 22px;
     height: 22px;
     left: 47px;
@@ -132,5 +133,9 @@
     cursor: pointer;
 }
 .commented {
-    background-color: rgb(0,106,126);
+    background-color: var(--color-icon-blue);
+}
+
+@media (max-width: 700px) {
+    
 }

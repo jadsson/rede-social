@@ -2,7 +2,7 @@
     include_once 'Conect.php';
 
     class User {
-        function CreateUser($name, $email, $pass){
+        function CreateUser($name, $email, $userimg, $pass){
 
             $sql = "SELECT id_user FROM users WHERE username = ?";
             $stmt = Conect::Con()->prepare($sql);
@@ -24,11 +24,12 @@
                 } else {
 
                     $msg = "";
-                    $sql = "INSERT INTO users (username, usermail, pass) VALUES (?,?,?)";
+                    $sql = "INSERT INTO users (username, usermail, userimg, pass) VALUES (?,?,?,?)";
                     $stmt = Conect::Con()->prepare($sql);
                     $stmt->bindValue(1, $name);
                     $stmt->bindValue(2, $email);
-                    $stmt->bindValue(3, password_hash($pass, PASSWORD_DEFAULT));
+                    $stmt->bindValue(3, $userimg);
+                    $stmt->bindValue(4, password_hash($pass, PASSWORD_DEFAULT));
                     $stmt->execute() ? $msg = "usuário registrado com sucesso" : "erro ao registrar usuário";
 
                     return $msg;
@@ -60,7 +61,7 @@
             $stmt->bindValue(1, $id);
             $stmt->execute();
 
-            return $stmt->rowCount() ? $stmt->fetchAll(PDO::FETCH_ASSOC) : [];
+            return $stmt->rowCount() ? $stmt->fetch(PDO::FETCH_ASSOC) : [];
         }
 
         function UpdateUser($id, $name){
@@ -92,7 +93,6 @@
 
             if($stmt->rowCount() > 0) {
                 $userData = $stmt->fetch(PDO::FETCH_ASSOC);
-                echo "<script>console.log('dados do usuário {$userData['username']}')</script>";
 
                 if(password_verify($password, $userData['pass'])) {
                     !isset($_SESSION) ? session_start() : false;
